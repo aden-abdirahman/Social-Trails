@@ -29,6 +29,12 @@ const userSchema = new Schema({
       ref: 'Trail',
     },
   ],
+  trips: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Trip',
+    }
+  ],
 });
 
 userSchema.pre('save', async function (next) {
