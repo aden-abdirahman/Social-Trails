@@ -19,28 +19,23 @@ function Header () {
       <div className="offcanvas-body">
         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li className="nav-item">
-            <Link className={currentPage === 'Home' ? 
-            'nav-link active' : 'nav-link'} aria-current="page" to={"/"}
+            <Link className='nav-link' aria-current="page" to={"/"}
             >Home</Link>
           </li>
           <li className="nav-item">
-            <Link className={currentPage === 'Profile' ? 
-            'nav-link active' : 'nav-link'} aria-current="page" to={"/profile"}
+            <Link className='nav-link' aria-current="page" to={"/profile"}
             >Profile</Link>
           </li>
           <li className="nav-item">
-            <Link className={currentPage === 'Trail Data' ? 
-            'nav-link active' : 'nav-link'} aria-current="page" to={"/traildata"}
+            <Link className='nav-link' aria-current="page" to={"/traildata"}
             >Trail Data</Link>
           </li>
           <li className="nav-item">
-            <Link className={currentPage === 'Trails Posts' ? 
-            'nav-link active' : 'nav-link'} aria-current="page" to={"/trailsposts"}
+            <Link className='nav-link' aria-current="page" to={"/trailsposts"}
             >Trail Posts</Link>
           </li>
           <li className="nav-item">
-            <Link className={currentPage === 'Travel' ? 
-            'nav-link active' : 'nav-link'} aria-current="page" to={"/travel"}
+            <Link className='nav-link' aria-current="page" to={"/travel"}
             >Travel</Link>
           </li>
         </ul>
