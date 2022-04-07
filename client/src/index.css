@@ -1,3 +1,12 @@
+:root {
+  --primaryBlue: #142187;
+  --secondaryBlue: #4E5EDD;
+  --brown: #805525;
+  --black: #201F1F;
+  --white: #F6F6F6;
+  --green: #177D2E;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +19,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.customNav {
+  background-color: var(--primaryBlue);
+  color: var(--white);
+  height: 80px;
+}
+
+.customSideNav {
+  
+}
+
+.whiteFont {
+  color: white;
+  text-decoration: none;
 }

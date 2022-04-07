@@ -9,15 +9,15 @@ import Travel from "./pages/Travel"
 import Header from "./Components/Header"
 const App = () => <Router>
     <div>
-    <Header />
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/profile" element={<Profile />} />
         <Route path="/traildata" element={<TrailData />} />
         <Route path="/trailposts" element={<TrailPosts />} />
         <Route path="/travel" element={<Travel />} />
-        <Route path="/authform" element={<AuthForm />} />
+        <Route path="/authform" element={<AuthForm />} /> */}
     </Routes>
+    <Header />
     </div>
 </Router>;
 
