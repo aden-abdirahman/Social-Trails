@@ -1,0 +1,27 @@
+.home {
+    width: 100%;
+    height: calc(70vh - 100px);
+    background-image: url(./1920x1080-5-e1609206442272.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 35px;
+  }
+  
+  .home h1 {
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size: 100px;
+  }
+
+  .home button{
+      width:50%;
+      color: gray;
+      align-items: center;
+  }
