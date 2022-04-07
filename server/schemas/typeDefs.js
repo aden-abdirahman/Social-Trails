@@ -8,8 +8,8 @@ const typeDefs = gql`
     email: String
     password: String
     location: String
-    trips: [Trip]!
-    trails: [Trails]!
+    trips: [Trip]
+    trails: [Trail]
   }
 
   type Trip {
@@ -18,16 +18,16 @@ const typeDefs = gql`
     tripAuthor: String
     location: String
     createdAt: String
-    comments: [Comments]!
+    comments: [Comment]
   }
 
-  type Trails {
+  type Trail {
     _id: ID
     trailText: String
     trailAuthor: String
     location: String
     createdAt: String
-    comments: [Comments]!
+    comments: [Comment]
   }
 
   type Comment {
@@ -47,6 +47,8 @@ const typeDefs = gql`
     user(username: String!): User
     trails(username: String): [Trail]
     trail(trailId: ID!): Trail
+    trips(username: String): [Trip]
+    trip(tripId: ID!): Trip
     me: User
   }
 

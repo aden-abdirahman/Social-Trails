@@ -19,6 +19,10 @@ const userSchema = new Schema({
     required: true,
     minlength: 7,
   },
+  location: {
+    type: String,
+    trim: true,
+  },
   trails: [
     {
       type: Schema.Types.ObjectId,
