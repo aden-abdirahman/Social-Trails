@@ -14,6 +14,10 @@ const trailSchema = new Schema({
     required: true,
     trim: true,
   },
+  location: {
+    type: String,
+    trim: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
