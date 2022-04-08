@@ -1,5 +1,34 @@
+:root {
+  --primaryBlue: #142187;
+  --secondaryBlue: #4E5EDD;
+  --brown: #805525;
+  --black: #201F1F;
+  --white: #F6F6F6;
+  --green: #177D2E;
+}
+
+h3 {
+  font-size: 48px;
+  color: var(--white);
+}
+
+h4 {
+  font-size: 36px;
+  color: var(--white);
+}
+
+main {
+  background-color: var(--brown);
+}
+
+.buttonDiv {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .home {
-    width: 100%;
+    /* width: 100%; */
     height: calc(70vh - 100px);
     background-image: url(./1920x1080-5-e1609206442272.jpg);
     background-size: cover;
@@ -11,6 +40,44 @@
     align-items: center;
     flex-flow: column wrap;
     gap: 35px;
+    margin-left: 150px;
+  margin-right: 150px;
+  border-bottom: 1px solid var(--white);
+  border-left: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  }
+
+  .homeButtons {
+    background-color: var(--secondaryBlue);
+    color: var(--white);
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+    font-size: 28px;
+    font-family: 'Khand', sans-serif;
+  }
+
+  .homeButtons:hover {
+    border: 2px solid var(--white);
+    text-shadow: var(--black) 2px 1px;
+  }
+
+  .homeNav {
+    margin-top: 95px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .homeSection {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
   }
   
   .home h1 {
