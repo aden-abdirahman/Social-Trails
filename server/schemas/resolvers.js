@@ -1,6 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Trail, Trip } = require('../models');
 const { signToken } = require('../utils/auth');
+const fetch = require('node-fetch');
+
 
 const resolvers = {
     Query: {
@@ -24,6 +26,37 @@ const resolvers = {
       trail: async (parent, { trailId }) => {
         return Trail.findOne({ _id: trailId });
       },
+      getTrails: async (parent, args) => {
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Host': 'trailapi-trailapi.p.rapidapi.com',
+            'X-RapidAPI-Key': 'b7e781f1a1msh6eacc6060e33814p176187jsn1fdbc4f2f029'
+          }
+        };
+        
+       const response = await fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=39.961178&lon=-82.998795', options)
+          
+       const data = await response.json();
+       console.log(data);
+       return data.data
+
+      },
+      getTrail: async (parent, { id }) => {
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Host': 'trailapi-trailapi.p.rapidapi.com',
+            'X-RapidAPI-Key': 'b7e781f1a1msh6eacc6060e33814p176187jsn1fdbc4f2f029'
+          }
+        };
+        
+        fetch(`https://trailapi-trailapi.p.rapidapi.com/trails/${id}`, options)
+          .then(response => response.json())
+          .then(response => console.log(response))
+          .catch(err => console.error(err));
+      },
+
       me: async (parent, args, context) => {
         if (context.user) {
           return User.findOne({ _id: context.user._id }).populate('trails');
