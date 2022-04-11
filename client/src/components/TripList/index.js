@@ -25,13 +25,13 @@ const TripList = ({
                 >
                   {trip.tripAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this trip on {trip.createdAt}
+                     Went on this trip on {trip.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this trip on {trip.createdAt}
+                    Went on this trip on {trip.createdAt}
                   </span>
                 </>
               )}

@@ -31,6 +31,28 @@ export const QUERY_TRAILS = gql`
     }
   }
 `;
+
+export const QUERY_API_TRAILS = gql`
+  query getTrails {
+    getTrails {
+      id
+      name
+      length
+      description
+      directions
+      city
+      region
+      country
+      lat
+      lon
+      difficulty
+      features
+      rating
+      thumbnail
+    }
+  }
+`;
+
 export const QUERY_TRIPS = gql`
   query getTrips {
     trips {

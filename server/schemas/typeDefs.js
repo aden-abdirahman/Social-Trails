@@ -79,7 +79,7 @@ const typeDefs = gql`
     addTrip(tripText: String!): Trip
     addComment(trailId: ID, tripId: ID, commentText: String!): Trail
     removeTrail(trailId: ID!): Trail
-    removeTrip(travelId: ID!): Trip
+    removeTrip(tripId: ID!): Trip
     removeComment(trailId: ID!, commentId: ID!): Trail
   }
 
