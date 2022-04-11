@@ -8,17 +8,10 @@ import TrailPosts from "./pages/TrailPosts"
 import Travel from "./pages/Travel"
 import Header from "./Components/Header"
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-
 const App = () => <Router>
     <div>
     <Routes>
-        <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/traildata" element={<TrailData />} />
         <Route path="/trailposts" element={<TrailPosts />} />
