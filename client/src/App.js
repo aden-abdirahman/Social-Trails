@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 import TrailList from './components/TrailList';
 import Trails from './pages/Trails';
 import Trips from './pages/Trips';
+import SearchTrails from './pages/SearchTrails';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -88,6 +89,10 @@ function App() {
               <Route 
                 path="/trips" 
                 element={<Trips />}
+              />
+              <Route 
+                path="/search" 
+                element={<SearchTrails />}
               />
             </Routes>
           </div>
