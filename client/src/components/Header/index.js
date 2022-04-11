@@ -39,7 +39,7 @@ function Header () {
                 >Trail Data</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trailsposts"}
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trails"}
                 >Trail Posts</Link>
               </li>
               <li className="nav-item">
@@ -51,7 +51,7 @@ function Header () {
                 >Sign Up</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/travel"}
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/login"}
                 >Log In</Link>
               </li>
               <li className="nav-item">

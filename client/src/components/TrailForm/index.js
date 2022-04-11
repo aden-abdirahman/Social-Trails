@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_TRAIL } from '../../helpers/mutations';
+import { ADD_TRAIL, REMOVE_TRAIL } from '../../helpers/mutations';
 import { QUERY_TRAILS, QUERY_ME } from '../../helpers/queries';
 
 import Auth from '../../helpers/auth';

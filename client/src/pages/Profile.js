@@ -1,54 +1,66 @@
 import React from 'react';
-import '../styles/Home.css';
-
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import '../styles/Home.css';
 
-import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../helpers/queries';
+import { QUERY_USER, QUERY_ME } from '../helpers/queries';
 
 import Auth from '../helpers/auth';
 
+import TrailList from '../components/TrailList';
+import TrailForm from '../components/TrailForm';
+
+import TripList from '../components/TripList';
+import TripForm from '../components/TripForm';
+
 const Profile = () => {
-  const { profileId } = useParams();
+  const { username: userParam } = useParams();
 
-  // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
-  // const { loading, data } = useQuery(
-  //   profileId ? QUERY_SINGLE_PROFILE : QUERY_ME,
-  //   {
-  //     variables: { profileId: profileId },
-  //   }
-  // );
+  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    variables: { username: userParam },
+  });
 
-  // // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  // const profile = data?.me || data?.profile || {};
+  const user = data?.me || data?.user || {};
+  // navigate to personal profile page if username is yours
+  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    return <Navigate to="/profile" />;
+  }
 
-  // // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
-  // if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-  //   return <Navigate to="/Profile" />;
-  // }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (!profile?.name) {
-  //   return (
-  //     <h4>
-  //       You need to be logged in to see your profile page. Use the navigation
-  //       links above to sign up or log in!
-  //     </h4>
-  //   );
-  // }
+  if (!user) {
+    return (
+      <h4 className="profile-details">
+        You need to be logged in to see this. Use the navigation links above to
+        sign up or log in!
+      </h4>
+    );
+  }
 
   return (
-    
-    
-        <section id="profile-details">
-            <h1>Hello World</h1>
-            <img src="/styles/profilePlaceholder.png" alt="placeholder for the profile icon."></img>
-        </section>
-   );
+    <div>
+      <div className="profile-details">
+        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
+          Viewing {userParam ? `${user.username}'s`:'your'} profile.
+        </h2>
+        
+
+        <div className="col-12 col-md-10 mb-5">
+        <TrailForm/>
+        {/* <TrailList/> */}
+        </div>
+
+        <div className="col-12 col-md-10 mb-5">
+        <TripForm/>
+        {/* <TripList/> */}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Profile;
+
 
