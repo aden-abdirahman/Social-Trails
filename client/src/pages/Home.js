@@ -8,15 +8,20 @@ import '../styles/Home.css';
     return (
       <main>
           <header className="home">
-            <h1>Social Trails</h1>
-          
-
-          <section>
-            <h3>Where Would You Like To Go</h3>
-            <button href="/Travel">Travel</button>
-            <button href="/TrailPosts">Trails</button>
-          </section>
+            {/* <h1>Social Trails</h1> */}
           </header>
+          <section className='homeSection'>
+            <h3>Welcome to Social Trails, the social platform for those with a hunger for adventure!</h3>
+            <div className='homeNav'>
+           <h4>
+             Tell Us Where You Want To Go
+           </h4>
+            <div className='buttonDiv'>
+            <button className='homeButtons' href="/Travel">Travel</button>
+            <button className='homeButtons' href="/TrailPosts">Trails</button>
+            </div>
+            </div>
+          </section>
 
       </main>
       

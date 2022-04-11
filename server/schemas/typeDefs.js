@@ -30,6 +30,24 @@ const typeDefs = gql`
     comments: [Comment]
   }
 
+  type ApiTrail {
+    id: Int
+    name: String
+    url: String
+    length: Float
+    description: String
+    directions: String
+    city: String
+    region: String
+    country: String
+    lat: Float
+    lon: Float
+    difficulty: String
+    features: String
+    rating: Float
+    thumbnail: String
+  }
+
   type Comment {
     _id: ID
     commentText: String
@@ -49,6 +67,8 @@ const typeDefs = gql`
     trail(trailId: ID!): Trail
     trips(username: String): [Trip]
     trip(tripId: ID!): Trip
+    getTrails: [ApiTrail]
+    getTrail(id: Int!): ApiTrail
     me: User
   }
 
