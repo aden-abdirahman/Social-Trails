@@ -1,6 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { resetApolloContext, useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { REMOVE_TRAIL } from '../../utils/mutations';
 
 
