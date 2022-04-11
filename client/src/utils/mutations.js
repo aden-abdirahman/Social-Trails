@@ -58,7 +58,7 @@ export const ADD_COMMENT = gql`
     addComment(thoughtId: $thoughtId, commentText: $commentText) {
       _id
       trailText
-      thoughtAuthor
+      trailAuthor
       createdAt
       comments {
         _id
@@ -68,3 +68,6 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+
+
