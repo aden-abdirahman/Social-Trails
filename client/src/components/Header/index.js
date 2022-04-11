@@ -31,7 +31,7 @@ function Header () {
                 >Home</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/profile"}
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/me"}
                 >Profile</Link>
               </li>
               <li className="nav-item">
@@ -51,7 +51,7 @@ function Header () {
                 >Sign Up</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/travel"}
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/login"}
                 >Log In</Link>
               </li>
               <li className="nav-item">
