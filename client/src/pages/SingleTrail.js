@@ -7,7 +7,7 @@ import { useQuery } from '@apollo/client';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 
-import { QUERY_SINGLE_TRAIL } from '../utils/queries';
+import { QUERY_SINGLE_TRAIL } from '../helpers/queries';
 
 const SingleTrail = () => {
   // Use `useParams()` to retrieve value of the route parameter `:profileId`

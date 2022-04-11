@@ -1,35 +1,51 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import { useLazyQuery } from '@apollo/client';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 import ApiTrailList from '../components/ApiTrailList';
+import SearchForm from '../components/SearchForm';
 
-import { QUERY_API_TRAILS } from '../utils/queries';
+import { QUERY_API_TRAILS } from '../helpers/queries';
+
 
 const Trails = () => {
-  const { loading, data } = useQuery(QUERY_API_TRAILS);
-  const trails = data?.getTrails || [];
+
+  const [data, setData] = useState([]);
+
+
+ const [trails, setTrails] = useState([]);
+
+ useEffect(() => {
+   setTrails(data?.getTrails)
+  }, [data?.getTrails]) 
+
+  // const trails =
+  //   data && data.getTrails
+  //     ? data.getTrails
+  //     : [];
+
 
   return (
     <main>
-      {/* <div className="flex-row justify-center">
+      <div className="flex-row justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
         >
-          <SearchForm />
-        </div> */}
+          <SearchForm
+          setData={setData}
+          />
+        </div>
 
         <div className="col-12 col-md-10 my-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
+        
             <ApiTrailList
-              trails={trails}
+              trails={trails} 
               title="Search Trails!"
             />
-          )}
         </div>
-      {/* </div> */}
+      </div>
     </main>
   );
 };

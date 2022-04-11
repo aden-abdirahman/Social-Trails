@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_TRIP } from '../../utils/mutations';
-import { QUERY_TRIPS, QUERY_ME } from '../../utils/queries';
+import { ADD_TRIP } from '../../helpers/mutations';
+import { QUERY_TRIPS, QUERY_ME } from '../../helpers/queries';
 
-import Auth from '../../utils/auth';
+import Auth from '../../helpers/auth';
 
 const TripForm = () => {
   const [tripText, setTripText] = useState('');
@@ -24,13 +24,6 @@ const TripForm = () => {
       } catch (e) {
         console.error(e);
       }
-
-      // update me object's cache
-      // const { me } = cache.readQuery({ query: QUERY_ME });
-      // cache.writeQuery({
-      //   query: QUERY_ME,
-      //   data: { me: { ...me, trips: [...me.trips, addTrip] } },
-      // });
     },
   });
 
