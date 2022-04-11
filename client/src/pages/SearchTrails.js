@@ -1,12 +1,10 @@
 import React from 'react';
-import { useLazyQuery } from '@apollo/client';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
 import ApiTrailList from '../components/ApiTrailList';
 import SearchForm from '../components/SearchForm';
 
-import { QUERY_API_TRAILS } from '../helpers/queries';
 
 
 const Trails = () => {

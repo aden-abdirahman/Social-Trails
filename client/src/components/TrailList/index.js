@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMutation } from '@apollo/client';
-import { REMOVE_TRAIL } from '../../utils/mutations';
+import { REMOVE_TRAIL } from '../../helpers/mutations';
 
 
 const TrailList = ({ trails, title }) => {
