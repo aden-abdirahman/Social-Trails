@@ -13,6 +13,11 @@ function Header () {
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span className="whiteFont customMenuIcon"><Icon icon="ant-design:menu-outlined" /></span>
         </button>
+        <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/profile"}
+                >Profile</Link>
+        <button>
+
+        </button>
 
         <div className="offcanvas offcanvas-end customSideNav" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 

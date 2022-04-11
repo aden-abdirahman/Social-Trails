@@ -7,6 +7,7 @@ import Travel from "./pages/Travel"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
 
+
 const App = () => 
 
 <Router>
@@ -15,11 +16,11 @@ const App = () =>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/travel" element={<Travel />} />
-        <Route path="/authform" element={<AuthForm />} /> 
+        <Route path="/authform" element={<AuthForm />} />  
     </Routes>
     <Header />
     </div>
     <Footer />
-</Router>;
+</Router>
 
 export default App;
