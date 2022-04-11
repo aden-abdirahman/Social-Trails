@@ -45,13 +45,6 @@ const Trails = () => {
               title="Search Trails!"
             />
         </div>
-        {/* <button
-        className="blue-button"
-          type="button"
-          onClick={() => loadTrails({ variables: { id: getTrails.id } })}
-            >
-          Trails
-      </button> */}
       </div>
     </main>
   );

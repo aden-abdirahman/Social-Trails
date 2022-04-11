@@ -13,7 +13,9 @@ const SearchForm = ({setData}) => {
 
     const [coords, setCoords] = useState({lat: 0, lon: 0});   // state for coords 
 
-    const [loadTrails, { loading, data }] = useLazyQuery(QUERY_API_TRAILS, {});
+    const [loadTrails, { loading, data }] = useLazyQuery(QUERY_API_TRAILS, {
+      variables: coords
+    });
 
 
 // lazy query to get trails
