@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ApiTrailList = ({ trails, title }) => {
-  if (!trails.length) {
+  if (!trails?.length) {
     return <h3>Can't find a trail</h3>;
   }
 
@@ -12,13 +12,12 @@ const ApiTrailList = ({ trails, title }) => {
         {trails &&
           trails.map((trail) => (
             <div key={trail.id} className="col-4 col-xl-2">
-              {console.log(trail)}
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
                   {trail.name}
                 </h4>
                 <div className="card-body">
-                <img src={trail.thumbnail} alt={trail.name} />
+                <img className="w-"src={trail.thumbnail} alt={trail.name} />
                 <p>{trail.city}</p>
                 <p>{trail.length}</p>
                 <p>{trail.description}</p>

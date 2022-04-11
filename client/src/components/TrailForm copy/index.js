@@ -2,28 +2,35 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_TRIP } from '../../helpers/mutations';
-import { QUERY_TRIPS, QUERY_ME } from '../../helpers/queries';
+import { ADD_THOUGHT } from '../../helpers/mutations';
+import { QUERY_THOUGHTS, QUERY_ME } from '../../helpers/queries';
 
 import Auth from '../../helpers/auth';
 
-const TripForm = () => {
-  const [tripText, setTripText] = useState('');
+const TrailForm = () => {
+  const [trailText, setTrailText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addTrip, { error }] = useMutation(ADD_TRIP, {
-    update(cache, { data: { addTrip } }) {
+  const [addTrail, { error }] = useMutation(ADD_TRAIL, {
+    update(cache, { data: { addTrail } }) {
       try {
-        const { trips } = cache.readQuery({ query: QUERY_TRIPS });
+        const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
 
         cache.writeQuery({
-          query: QUERY_TRIPS,
-          data: { trips: [addTrip, ...trips] },
+          query: QUERY_THOUGHTS,
+          data: { thoughts: [addTrail, ...thoughts] },
         });
       } catch (e) {
         console.error(e);
       }
+
+      // update me object's cache
+      const { me } = cache.readQuery({ query: QUERY_ME });
+      cache.writeQuery({
+        query: QUERY_ME,
+        data: { me: { ...me, thoughts: [...me.trails, addTrail] } },
+      });
     },
   });
 
@@ -31,14 +38,14 @@ const TripForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await addTrip({
+      const { data } = await addTrail({
         variables: {
-          tripText,
-          tripAuthor: Auth.getProfile().data.username,
+          trailText,
+          trailAuthor: Auth.getProfile().data.username,
         },
       });
 
-      setTripText('');
+      setTrailText('');
     } catch (err) {
       console.error(err);
     }
@@ -47,15 +54,15 @@ const TripForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'tripText' && value.length <= 280) {
-      setTripText(value);
+    if (name === 'trailText' && value.length <= 280) {
+      setTrailText(value);
       setCharacterCount(value.length);
     }
   };
 
   return (
     <div>
-      <h3>Share your next Trip!</h3>
+      <h3>Share your next Trail!</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -72,9 +79,9 @@ const TripForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="tripText"
-                placeholder="Plan your next trip..."
-                value={tripText}
+                name="trailText"
+                placeholder="Here's a new thought..."
+                value={trailText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -83,7 +90,7 @@ const TripForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Trip
+                Add Trail
               </button>
             </div>
             {error && (
@@ -95,7 +102,7 @@ const TripForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your trip. Please{' '}
+          You need to be logged in to share your trail. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
@@ -103,4 +110,4 @@ const TripForm = () => {
   );
 };
 
-export default TripForm;
+export default TrailForm;

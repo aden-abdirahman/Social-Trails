@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import TrailList from '../components/TrailList';
 import TrailForm from '../components/TrailForm';
 
-import { QUERY_TRAILS } from '../utils/queries';
+import { QUERY_TRAILS } from '../helpers/queries';
 
 const Trails = () => {
   const { loading, data } = useQuery(QUERY_TRAILS);

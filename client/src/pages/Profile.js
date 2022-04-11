@@ -4,9 +4,9 @@ import '../styles/Home.css';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
+import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../helpers/queries';
 
-import Auth from '../utils/auth';
+import Auth from '../helpers/auth';
 
 const Profile = () => {
   const { profileId } = useParams();

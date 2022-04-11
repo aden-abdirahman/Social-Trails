@@ -22,9 +22,9 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_TRAILS = gql`
-  query getTrails {
-    trails {
-      _id
+  query getTrails($lat: Float, $lon: Float) {
+    getTrails(lat: $lat, lon: $lon) {
+      id
       trailText
       trailAuthor
       createdAt

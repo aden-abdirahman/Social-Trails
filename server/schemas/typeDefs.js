@@ -67,7 +67,7 @@ const typeDefs = gql`
     trail(trailId: ID!): Trail
     trips(username: String): [Trip]
     trip(tripId: ID!): Trip
-    getTrails: [ApiTrail]
+    getTrails(lat: Float, lon: Float): [ApiTrail]
     getTrail(id: Int!): ApiTrail
     me: User
   }
