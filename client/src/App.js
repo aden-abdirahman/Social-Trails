@@ -66,14 +66,14 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
-              {/* <Route 
-                path="/me" 
+              <Route 
+                path="/profile" 
                 element={<Profile />}
               />
               <Route 
                 path="/profiles/:username" 
                 element={<Profile />}
-              /> */}
+              />
               <Route 
                 path="/trails/:trailId" 
                 element={<SingleTrail />}
