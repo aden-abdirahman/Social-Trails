@@ -92,3 +92,7 @@ main {
       color: gray;
       align-items: center;
   }
+
+  .profile-details{
+    margin-top: 100px;
+  }
