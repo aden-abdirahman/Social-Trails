@@ -1,0 +1,80 @@
+import { gql } from '@apollo/client';
+
+export const QUERY_TRAILS = gql`
+  query getTrails {
+    trails {
+            _id
+        trailText
+        trailAuthor
+        location
+        createdAt
+        }
+  }
+`;
+export const QUERY_TRIPS = gql`
+  query getTrips {
+    trips {
+            _id
+        tripText
+        tripAuthor
+        location
+        createdAt
+        }
+  }
+`;
+
+export const QUERY_SINGLE_TRAIL = gql`
+  query getSingleTrail($trailId: ID!) {
+    trail(trailId: $trailId) {
+      _id
+      trailText
+      trailAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
+export const QUERY_SINGLE_TRIP = gql`
+  query getSingleTrip($tripId: ID!) {
+    trip(tripId: $tripId) {
+      _id
+      tripText
+      tripAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      trails {
+        _id
+        trailText
+        trailAuthor
+        createdAt
+      }
+      trips {
+        _id
+        tripText
+        tripAuthor
+        createdAt
+      }
+    }
+  }
+`;

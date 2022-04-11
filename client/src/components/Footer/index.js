@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import '../index.css'
+import '../../index.css'
 
 export default function Footer () {
     return (
