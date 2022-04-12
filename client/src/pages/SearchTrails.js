@@ -1,12 +1,10 @@
 import React from 'react';
-import { useLazyQuery } from '@apollo/client';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
 import ApiTrailList from '../components/ApiTrailList';
 import SearchForm from '../components/SearchForm';
 
-import { QUERY_API_TRAILS } from '../helpers/queries';
 
 
 const Trails = () => {
@@ -27,10 +25,10 @@ const Trails = () => {
 
 
   return (
-    <main>
-      <div className="flex-row justify-center">
+    <main className="search">
+      <div>
         <div
-          className="col-12 col-md-10 mb-3 p-3"
+          className=""
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <SearchForm
@@ -38,7 +36,7 @@ const Trails = () => {
           />
         </div>
 
-        <div className="col-12 col-md-10 my-3">
+        <div className="flex justify-content-center">
         
             <ApiTrailList
               trails={trails} 

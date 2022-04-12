@@ -55,7 +55,7 @@ const TrailForm = () => {
   };
 
   return (
-    <div>
+    <div className='trail-form align-items-center justify-content-center'>
       <h3>Share your next Trail!</h3>
 
       {Auth.loggedIn() ? (
@@ -68,10 +68,10 @@ const TrailForm = () => {
             Character Count: {characterCount}/280
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="trail-text">
               <textarea
                 name="trailText"
                 placeholder="Leave a new trail..."
@@ -82,13 +82,13 @@ const TrailForm = () => {
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div className="">
+              <button className="btn btn-dark btn-block py-3 mb-2" type="submit">
                 Add Trail
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className="">
                 {error.message}
               </div>
             )}
