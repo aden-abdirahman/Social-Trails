@@ -55,8 +55,8 @@ export const ADD_TRIP = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+  mutation addComment($tripId: ID!, $commentText: String!) {
+    addComment(tripId: $tripId, commentText: $commentText) {
       _id
       trailText
       trailAuthor

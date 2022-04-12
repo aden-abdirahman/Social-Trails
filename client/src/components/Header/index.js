@@ -2,8 +2,11 @@ import React from 'react';
 import '../../index.css';
 import { Link } from "react-router-dom";
 import { Icon } from '@iconify/react';
+import Auth from '../../utils/auth';
 
 function Header () {
+
+
     return (
 
       <nav className="navbar customNav fixed-top">
@@ -19,7 +22,7 @@ function Header () {
         <div className="offcanvas offcanvas-end customSideNav" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title customHeaderTitle" id="offcanvasNavbarLabel">Social Trails</h5>
+            <h5 className="offcanvas-title customHeaderTitle whiteFont" id="offcanvasNavbarLabel">Social Trails</h5>
             <button type="button" className="btn-close whiteFont" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
 
@@ -28,37 +31,36 @@ function Header () {
 
               <li className="nav-item">
                 <Link className="nav-link whiteFont customNavLink customNavLinkText" aria-current="page" to={"/"}
-                >Home</Link>
+                > <Icon icon="akar-icons:home" /> Home</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/profile"}
-                >Profile</Link>
+                > <Icon icon="akar-icons:person" /> Profile</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/traildata"}
-                >Trail Data</Link>
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/search"}
+                > <Icon icon="akar-icons:search" /> Search Trails</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trails"}
-                >Trail Posts</Link>
+                > <Icon icon="ic:baseline-hiking" /> Trail Posts</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/travel"}
-                >Travel</Link>
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trips"}
+                > <Icon icon="ic:baseline-airplanemode-active" /> Travel</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/signup"}
-                >Sign Up</Link>
+                > <Icon icon="akar-icons:clipboard" /> Sign Up</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/login"}
-                >Log In</Link>
+                > <Icon icon="akar-icons:clipboard" /> Log In</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/travel"}
-                >Log Out</Link>
-              </li>
-
+              <button className='nav-link whiteFont customNavLinkBottom customNavLinkText' aria-current="page" onClick={Auth.logout}
+              > <Icon icon="icomoon-free:exit" /> Log Out</button>
+            </li>
             </ul>
 
           </div>

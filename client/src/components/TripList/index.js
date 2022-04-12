@@ -62,6 +62,7 @@ const TripList = ({
             <button type='submit' onClick={(event) => handleTripDelete(event, trip._id)}>Delete</button>
             <div className="card-body bg-light p-2">
               <p>{trip.tripText}</p>
+              <p>{trip.commentText}</p>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
