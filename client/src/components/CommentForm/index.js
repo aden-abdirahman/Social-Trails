@@ -6,7 +6,7 @@ import { ADD_COMMENT } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const CommentForm = ({ trailId , tripId}) => {
+const CommentForm = ({ trailId}) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -18,7 +18,6 @@ const CommentForm = ({ trailId , tripId}) => {
     try {
       const { data } = await addComment({
         variables: {
-          tripId,
           trailId,
           commentText,
           commentAuthor: Auth.getProfile().data.username,
