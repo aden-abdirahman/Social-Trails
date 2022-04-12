@@ -77,12 +77,12 @@ const SearchForm = ({setData}) => {
   };
 
   return (
-      <div className='m-auto'>
+      <div className='search-form'>
            <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
-               <div className="col-12 col-lg-9">
+               <div className="search-text">
               <textarea
                 name="search"
                 placeholder="Search for trails..."
@@ -91,10 +91,10 @@ const SearchForm = ({setData}) => {
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
-            </div>
-            <button className="btn btn-primary btn-block py-3" type="submit">
+            <button className=" search-btn btn btn-dark btn-block py-3" type="submit">
                 Search
               </button>
+            </div>
           </form>
       </div>
   )

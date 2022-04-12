@@ -35,16 +35,16 @@ function Header () {
                 >Profile</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/traildata"}
-                >Trail Data</Link>
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/search"}
+                >Search</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trails"}
                 >Trail Posts</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/travel"}
-                >Travel</Link>
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trip"}
+                >Trip</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/signup"}

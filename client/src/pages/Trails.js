@@ -12,15 +12,15 @@ const Trails = () => {
 
   return (
     <main>
-      <div className="flex-row justify-center">
+      <div className="">
         <div
-          className="col-12 col-md-10 mb-3 p-3"
+          className=""
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <TrailForm />
         </div>
 
-        <div className="col-12 col-md-10 my-3">
+        <div className="">
           {loading ? (
             <div>Loading...</div>
           ) : (

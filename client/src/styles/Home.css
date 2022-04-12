@@ -18,7 +18,8 @@ h4 {
 }
 
 main {
-  background-color: var(--brown);
+  /* background-image: url(./nature.jpg); */
+  background-color: teal;
 }
 
 .buttonDiv {

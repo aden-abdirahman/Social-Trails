@@ -29,19 +29,19 @@ const TrailList = ({ trails, title }) => {
   }
 
   return (
-    <div>
-      <h3 className="text-primary">{title}</h3>
-      <div className="flex-row justify-space-between my-4">
+    <div className='trail-page'>
+      <h3 className="trail-title">{title}</h3>
+      <div className="trail-list">
         {trails &&
           trails.map((trail) => (
-            <div key={trail._id} className="col-12 col-xl-6">
-              <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0">
+            <div key={trail._id} className="">
+              <div className="card trail-item">
+                <h4 className="card-header trail-item-head">
                   {trail.trailAuthor}
                 </h4>
-                <button type='submit' onClick={(event) => handleTrailDelete(event, trail._id)}>Delete</button>
                 <p>{trail.trailText}</p>
                 <p>{trail.location}<span>{trail.createdAt}</span></p>
+                <button type='submit' onClick={(event) => handleTrailDelete(event, trail._id)}>Delete</button>
               </div>
             </div>
           ))}

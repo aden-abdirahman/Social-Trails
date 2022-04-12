@@ -17,7 +17,7 @@ import '../styles/Home.css';
              Tell Us Where You Want To Go
            </h4>
             <div className='buttonDiv'>
-            <button className='homeButtons' href="/Travel">Travel</button>
+            <button className='homeButtons' href="/Trips">Trips</button>
             <button className='homeButtons' href="/TrailPosts">Trails</button>
             </div>
             </div>
