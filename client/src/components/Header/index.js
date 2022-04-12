@@ -40,11 +40,11 @@ function Header () {
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trails"}
-                >Trail Posts</Link>
+                >Trails</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trip"}
-                >Trip</Link>
+                <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trips"}
+                >Trips</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/signup"}
