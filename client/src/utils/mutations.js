@@ -38,6 +38,7 @@ export const ADD_TRAIL = gql`
     }
   }
 `;
+
 export const ADD_TRIP = gql`
   mutation addTrip($tripText: String!) {
     addTrip(tripText: $tripText) {
@@ -54,8 +55,8 @@ export const ADD_TRIP = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+  mutation addComment($tripId: ID!, $commentText: String!) {
+    addComment(tripId: $tripId, commentText: $commentText) {
       _id
       trailText
       trailAuthor
@@ -68,6 +69,33 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const REMOVE_TRAIL = gql`
+  mutation removeTrail($trailId: ID!) {
+    removeTrail(trailId: $trailId) {
+      _id
+    }
+  }
+`;
+
+export const REMOVE_TRIP = gql`
+  mutation removeTrip($tripId: ID!) {
+    removeTrip(tripId: $tripId) {
+      _id
+    }
+  }
+`;
+
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($commentId: ID!) {
+    removeComment(commentId: $commentId) {
+      _id
+    }
+  }
+`;
+
+
 
 
 

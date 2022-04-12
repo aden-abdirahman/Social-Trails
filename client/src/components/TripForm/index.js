@@ -26,11 +26,11 @@ const TripForm = () => {
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME });
-      cache.writeQuery({
-        query: QUERY_ME,
-        data: { me: { ...me, trips: [...me.trails, addTrip] } },
-      });
+      // const { me } = cache.readQuery({ query: QUERY_ME });
+      // cache.writeQuery({
+      //   query: QUERY_ME,
+      //   data: { me: { ...me, trips: [...me.trips, addTrip] } },
+      // });
     },
   });
 
@@ -80,7 +80,7 @@ const TripForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="tripText"
-                placeholder="Here's a new thought..."
+                placeholder="Plan your next trip..."
                 value={tripText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -90,7 +90,7 @@ const TripForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Trail
+                Add Trip
               </button>
             </div>
             {error && (

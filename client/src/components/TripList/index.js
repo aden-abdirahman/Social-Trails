@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { REMOVE_TRIP } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const TripList = ({
   trips,
@@ -7,6 +9,27 @@ const TripList = ({
   showTitle = true,
   showUsername = true,
 }) => {
+
+  const [removeTrip, {error, reset} ] = useMutation(REMOVE_TRIP);
+
+
+ 
+  const handleTripDelete = async (event, id) => {
+    // event.preventDefault();
+    // console.log(id);
+    try {
+      const { data } = await removeTrip({
+        variables: {
+          tripId: id,
+        },
+      });
+      document.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+
   if (!trips.length) {
     return <h3>No Trips Yet</h3>;
   }
@@ -25,19 +48,21 @@ const TripList = ({
                 >
                   {trip.tripAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this trip on {trip.createdAt}
+                     Went on this trip on {trip.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this trip on {trip.createdAt}
+                    Went on this trip on {trip.createdAt}
                   </span>
                 </>
               )}
             </h4>
+            <button type='submit' onClick={(event) => handleTripDelete(event, trip._id)}>Delete</button>
             <div className="card-body bg-light p-2">
               <p>{trip.tripText}</p>
+              <p>{trip.commentText}</p>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
