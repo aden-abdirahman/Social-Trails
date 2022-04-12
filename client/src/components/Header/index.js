@@ -58,8 +58,8 @@ function Header () {
                 > <Icon icon="akar-icons:clipboard" /> Log In</Link>
               </li>
               <li className="nav-item">
-              <button className='nav-link whiteFont customNavLinkBottom customNavLinkText' aria-current="page" onClick={Auth.logout}
-              > <Icon icon="icomoon-free:exit" /> Log Out</button>
+              <Link className='nav-link whiteFont customNavLinkBottom customNavLinkText' aria-current="page" onClick={Auth.logout}
+              > <Icon icon="icomoon-free:exit" /> Log Out</Link>
             </li>
             </ul>
 
