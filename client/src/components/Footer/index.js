@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icon } from '@iconify/react';
 import '../../index.css'
 
 export default function Footer () {
@@ -17,22 +16,22 @@ export default function Footer () {
         <ul className='footerUl'>
             <li>
                 <a className='contactLink' href="mailto: jsmartin01@gmail.com" target="_blank">
-                <Icon icon="carbon:email" />
+                Email
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://github.com/SleepyJake18" target="_blank">
-                <Icon icon="akar-icons:github-fill" />
+                GitHub
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank">
-                <Icon icon="akar-icons:linkedin-box-fill" />
+                LinkedIn
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://stackoverflow.com/users/17466669/sleepyjake" target="_blank">
-                <Icon icon="mdi:stack-overflow" />
+                StackOverFlow
                 </a>
             </li>
         </ul>
@@ -46,22 +45,22 @@ export default function Footer () {
         <ul className='footerUl'>
             <li>
                 <a className='contactLink' href="mailto: jsmartin01@gmail.com" target="_blank">
-                <Icon icon="carbon:email" />
+                Email
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://github.com/SleepyJake18" target="_blank">
-                <Icon icon="akar-icons:github-fill" />
+                GitHub
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank">
-                <Icon icon="akar-icons:linkedin-box-fill" />
+                LinkedIn
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://stackoverflow.com/users/17466669/sleepyjake" target="_blank">
-                <Icon icon="mdi:stack-overflow" />
+                StackOverFlow
                 </a>
             </li>
         </ul>
@@ -74,22 +73,22 @@ export default function Footer () {
         <ul className='footerUl'>
             <li>
                 <a className='contactLink' href="mailto: jsmartin01@gmail.com" target="_blank">
-                <Icon icon="carbon:email" />
+                Email
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://github.com/SleepyJake18" target="_blank">
-                <Icon icon="akar-icons:github-fill" />
+                GitHub
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://www.linkedin.com/in/jacob-martin-779905222/" target="_blank">
-                <Icon icon="akar-icons:linkedin-box-fill" />
+                LinkedIn
                 </a>
             </li>
             <li>
                 <a className='contactLink' href="https://stackoverflow.com/users/17466669/sleepyjake" target="_blank">
-                <Icon icon="mdi:stack-overflow" />
+                StackOverFlow
                 </a>
             </li>
         </ul>
