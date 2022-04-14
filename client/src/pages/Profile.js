@@ -3,9 +3,9 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import '../styles/Home.css';
 
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_USER, QUERY_ME } from '../helpers/queries';
 
-import Auth from '../utils/auth';
+import Auth from '../helpers/auth';
 
 import TrailList from '../components/TrailList';
 import TrailForm from '../components/TrailForm';

@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import TripList from '../components/TripList';
 import TripForm from '../components/TripForm';
 
-import { QUERY_TRIPS } from '../utils/queries';
+import { QUERY_TRIPS } from '../helpers/queries';
 
 const Trips = () => {
   const { loading, data } = useQuery(QUERY_TRIPS);
@@ -12,15 +12,15 @@ const Trips = () => {
 
   return (
     <main>
-      <div className="flex-row justify-center">
+      <div className="">
         <div
-          className="col-12 col-md-10 mb-3 p-3"
+          className=""
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <TripForm />
         </div>
 
-        <div className="col-12 col-md-10 my-3">
+        <div className="">
           {loading ? (
             <div>Loading...</div>
           ) : (

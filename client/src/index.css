@@ -94,3 +94,153 @@ footer {
   color: white;
   text-decoration: none;
 }
+
+.container {
+  margin-top: 96px
+}
+
+.page-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.trail-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+.trail-item {
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  border-radius: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.trail-item button {
+  width: 33%;
+  margin: 0 auto;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+}
+
+trail-item-head{
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+}
+
+.trail-page {
+  text-align: center;
+}
+
+.trail-form {
+  text-align: center;
+}
+
+.trail-text {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  /* display: flex; */
+  width: 300px;
+  height: 300px;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  text-align: center;
+}
+
+.login-card .btn {
+  width: 33%;
+  margin: 5 auto;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+}
+
+.login-card .btn:hover {
+  background-color: var(--white-alpha-40);
+}
+
+.trip-page {
+  text-align: center;
+}
+
+.trip-item {
+  width: 50%;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  border-radius: 30px;
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
+}
+
+.trip-item button {
+  width: 33%;
+  margin: 0 auto;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+}
+
+.trip-share {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.search {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.search-text {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* .api-img {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+} */
+
+.api-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.form-comment {
+  color: black;
+}
+
+.comment-text {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.comment-btn {
+  width: 33%;
+  margin: 0 auto;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+}
+
+/* .page-container {
+  height: 100vh;
+} */
+
+.navbar {
+  background-color: #201F1F;
+}

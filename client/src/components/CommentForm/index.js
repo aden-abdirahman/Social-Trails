@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_COMMENT } from '../../utils/mutations';
+import { ADD_COMMENT } from '../../helpers/mutations';
 
-import Auth from '../../utils/auth';
+import Auth from '../../helpers/auth';
 
 const CommentForm = ({ trailId , tripId}) => {
   const [commentText, setCommentText] = useState('');
@@ -41,8 +41,8 @@ const CommentForm = ({ trailId , tripId}) => {
   };
 
   return (
-    <div>
-      <h4>What are your thoughts on this thought?</h4>
+    <div className='form-comment'>
+      <h4 className='text-dark'>What are your thoughts on this thought?</h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -55,10 +55,10 @@ const CommentForm = ({ trailId , tripId}) => {
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="comment-text">
               <textarea
                 name="commentText"
                 placeholder="Add your comment..."
@@ -69,8 +69,8 @@ const CommentForm = ({ trailId , tripId}) => {
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div className="comment-btn">
+              <button className="btn btn-dark btn-block py-3" type="submit">
                 Add Comment
               </button>
             </div>

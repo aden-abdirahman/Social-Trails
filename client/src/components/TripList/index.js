@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { REMOVE_TRIP } from '../../utils/mutations';
+import { REMOVE_TRIP } from '../../helpers/mutations';
 import { useMutation } from '@apollo/client';
 
 const TripList = ({
@@ -35,12 +35,12 @@ const TripList = ({
   }
 
   return (
-    <div>
+    <div className='trip-page'>
       {showTitle && <h3>{title}</h3>}
       {trips &&
         trips.map((trip) => (
-          <div key={trip._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+          <div key={trip._id} className="card trip-item">
+            <h4 className="card-header trip-item-head">
               {showUsername ? (
                 <Link
                   className="text-light"
@@ -60,12 +60,12 @@ const TripList = ({
               )}
             </h4>
             <button type='submit' onClick={(event) => handleTripDelete(event, trip._id)}>Delete</button>
-            <div className="card-body bg-light p-2">
+            <div className="card-body">
               <p>{trip.tripText}</p>
               <p>{trip.commentText}</p>
             </div>
             <Link
-              className="btn btn-primary btn-block btn-squared"
+              className="btn btn-dark btn-block btn-squared trip-share"
               to={`/trips/${trip._id}`}
             >
               Share your trip...

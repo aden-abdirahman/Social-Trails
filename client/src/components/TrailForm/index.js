@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_TRAIL, REMOVE_TRAIL } from '../../utils/mutations';
-import { QUERY_TRAILS, QUERY_ME } from '../../utils/queries';
+import { ADD_TRAIL, REMOVE_TRAIL } from '../../helpers/mutations';
+import { QUERY_TRAILS, QUERY_ME } from '../../helpers/queries';
 
-import Auth from '../../utils/auth';
+import Auth from '../../helpers/auth';
 
 const TrailForm = () => {
   const [trailText, setTrailText] = useState('');
@@ -25,14 +25,6 @@ const TrailForm = () => {
         console.error(e);
       }
 
-      // update me object's cache
-      // 
-      // const  me  = cache.readQuery({ query: QUERY_ME });
-      // console.log(me);
-      // cache.writeQuery({
-      //   query: QUERY_ME,
-      //   data: { me: { ...me, trails: [...me.trails, addTrail] } },
-      // });
     },
   });
 
@@ -63,7 +55,7 @@ const TrailForm = () => {
   };
 
   return (
-    <div>
+    <div className='trail-form align-items-center justify-content-center'>
       <h3>Share your next Trail!</h3>
 
       {Auth.loggedIn() ? (
@@ -76,10 +68,10 @@ const TrailForm = () => {
             Character Count: {characterCount}/280
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className=""
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="trail-text">
               <textarea
                 name="trailText"
                 placeholder="Leave a new trail..."
@@ -90,13 +82,13 @@ const TrailForm = () => {
               ></textarea>
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div className="">
+              <button className="btn btn-dark btn-block py-3 mb-2" type="submit">
                 Add Trail
               </button>
             </div>
             {error && (
-              <div className="col-12 my-3 bg-danger text-white p-3">
+              <div className="">
                 {error.message}
               </div>
             )}

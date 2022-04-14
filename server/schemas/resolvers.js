@@ -35,7 +35,7 @@ const resolvers = {
           }
         };
         
-       const response = await fetch('https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=39.961178&lon=-82.998795', options)
+       const response = await fetch(`https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=${args.lat}&lon=${args.lon}`, options)
           
        const data = await response.json();
        console.log(data);

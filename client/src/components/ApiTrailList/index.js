@@ -1,24 +1,25 @@
 import React from 'react';
 
 const ApiTrailList = ({ trails, title }) => {
-  if (!trails.length) {
+  if (!trails?.length) {
     return <h3>Can't find a trail</h3>;
   }
 
   return (
-    <div>
-      <h3 className="text-primary">{title}</h3>
-      <div className="flex-row justify-space-between my-4">
+    <div className='trail-page'>
+      <h3 className="">{title}</h3>
+      <div className="trail-list">
         {trails &&
           trails.map((trail) => (
-            <div key={trail.id} className="col-4 col-xl-2">
-              {console.log(trail)}
-              <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0">
+            <div key={trail.id} className="card trail-item">
+              <div className="">
+                <h4 className=" card-header trail-item-head text-dark">
                   {trail.name}
                 </h4>
-                <div className="card-body">
-                <img src={trail.thumbnail} alt={trail.name} />
+                <div className="">
+                  <div className='img-container'>
+                <img className="api-img" src={trail.thumbnail} alt={trail.name} />
+                  </div>
                 <p>{trail.city}</p>
                 <p>{trail.length}</p>
                 <p>{trail.description}</p>
