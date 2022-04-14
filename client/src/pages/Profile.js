@@ -5,7 +5,7 @@ import '../styles/Home.css';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
-import Auth from '../helpers/auth';
+import Auth from '../utils/auth';
 
 import TrailList from '../components/TrailList';
 import TrailForm from '../components/TrailForm';
