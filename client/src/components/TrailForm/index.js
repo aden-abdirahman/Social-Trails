@@ -5,7 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_TRAIL, REMOVE_TRAIL } from '../../utils/mutations';
 import { QUERY_TRAILS, QUERY_ME } from '../../utils/queries';
 
-import Auth from '../../helpers/auth';
+import Auth from '../../utils/auth';
 
 const TrailForm = () => {
   const [trailText, setTrailText] = useState('');
