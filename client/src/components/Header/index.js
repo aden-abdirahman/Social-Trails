@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../index.css';
 import { Link } from "react-router-dom";
-import { Icon } from '@iconify/react';
+// import { Icon } from '@iconify/react';
 import Auth from '../../utils/auth';
 
 function Header () {
@@ -31,35 +31,35 @@ function Header () {
 
               <li className="nav-item">
                 <Link className="nav-link whiteFont customNavLink customNavLinkText" aria-current="page" to={"/"}
-                > <Icon icon="akar-icons:home" /> Home</Link>
+                >Home</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/profile"}
-                > <Icon icon="akar-icons:person" /> Profile</Link>
+                >Profile</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/search"}
-                > <Icon icon="akar-icons:search" /> Search Trails</Link>
+                >Search Trails</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trails"}
-                > <Icon icon="ic:baseline-hiking" /> Trail Posts</Link>
+                >Trail Posts</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/trips"}
-                > <Icon icon="ic:baseline-airplanemode-active" /> Travel</Link>
+                >Travel</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/signup"}
-                > <Icon icon="akar-icons:clipboard" /> Sign Up</Link>
+                >Sign Up</Link>
               </li>
               <li className="nav-item">
                 <Link className='nav-link whiteFont customNavLink customNavLinkText' aria-current="page" to={"/login"}
-                > <Icon icon="akar-icons:clipboard" /> Log In</Link>
+                >Log In</Link>
               </li>
               <li className="nav-item">
               <Link className='nav-link whiteFont customNavLinkBottom customNavLinkText' aria-current="page" onClick={Auth.logout}
-              > <Icon icon="icomoon-free:exit" /> Log Out</Link>
+              >Log Out</Link>
             </li>
             </ul>
 
