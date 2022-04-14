@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import TripList from '../components/TripList';
 import TripForm from '../components/TripForm';
 
-import { QUERY_TRIPS } from '../helpers/queries';
+import { QUERY_TRIPS } from '../utils/queries';
 
 const Trips = () => {
   const { loading, data } = useQuery(QUERY_TRIPS);
