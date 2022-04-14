@@ -5,7 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_TRIP } from '../../utils/mutations';
 import { QUERY_TRIPS, QUERY_ME } from '../../utils/queries';
 
-import Auth from '../../helpers/auth';
+import Auth from '../../utils/auth';
 
 const TripForm = () => {
   const [tripText, setTripText] = useState('');
