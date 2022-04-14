@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_COMMENT } from '../../helpers/mutations';
+import { ADD_COMMENT } from '../../utils/mutations';
 
-import Auth from '../../helpers/auth';
+import Auth from '../../utils/auth';
 
 const CommentForm = ({ trailId , tripId}) => {
   const [commentText, setCommentText] = useState('');

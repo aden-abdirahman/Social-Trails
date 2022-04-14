@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_TRIP } from '../../helpers/mutations';
-import { QUERY_TRIPS, QUERY_ME } from '../../helpers/queries';
+import { ADD_TRIP } from '../../utils/mutations';
+import { QUERY_TRIPS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../helpers/auth';
 

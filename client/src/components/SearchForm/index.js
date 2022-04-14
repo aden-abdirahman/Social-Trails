@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import { useLazyQuery } from '@apollo/client';
 
 
-import { QUERY_API_TRAILS, QUERY_ME } from '../../helpers/queries';
+import { QUERY_API_TRAILS, QUERY_ME } from '../../utils/queries';
 
 
 

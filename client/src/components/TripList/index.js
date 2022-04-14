@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { REMOVE_TRIP } from '../../helpers/mutations';
+import { REMOVE_TRIP } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
 
 const TripList = ({
