@@ -14,7 +14,7 @@ function Header () {
       <div className="container-fluid">
         <a className=" whiteFont customHeaderTitle align-self-center" href="#">Social Trails</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <span className="whiteFont customMenuIcon"><Icon icon="ant-design:menu-outlined" /></span>
+          <span className="whiteFont customMenuIcon"></span>
         </button>
         
         
